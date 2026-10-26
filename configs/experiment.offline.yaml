@@ -1,0 +1,25 @@
+# Same pipeline with zero downloads: hashed embeddings, no cross-encoder, toy
+# corpus. This is what CI runs, and what proves the wiring before you spend
+# 20 minutes embedding a real corpus.
+
+dataset: toy
+top_k: 10
+eval_depth: 100
+
+chunking:
+  enabled: true
+  size: 256
+  overlap: 32
+
+dense:
+  backend: hashing
+  hashing_dim: 256
+  batch_size: 64
+
+rerank:
+  backend: identity
+  candidates: 50
+
+hybrid:
+  rrf_k: 60
+  depth: 200

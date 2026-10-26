@@ -1,0 +1,35 @@
+# Experiment configuration. Every key here can be overridden by a CLI flag or by
+# an environment variable (SEMSEARCH_TOP_K=20, SEMSEARCH_DENSE__BACKEND=hashing).
+
+dataset: beir/scifact        # ir_datasets id | jsonl:<folder> | toy
+split_queries: test
+max_docs: null               # null = the whole corpus
+max_queries: null
+
+top_k: 10                    # results returned, and the nDCG/MRR cutoff
+eval_depth: 100              # ranked-list depth, and the Recall@k cutoff
+
+chunking:
+  enabled: true
+  size: 256                  # tokens per chunk
+  overlap: 32
+  min_chars: 20
+
+dense:
+  backend: sentence-transformers   # or: hashing (offline, no download)
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 64
+  normalize: true
+  hashing_dim: 256
+
+rerank:
+  backend: cross-encoder     # or: identity (skips the model)
+  model_name: cross-encoder/ms-marco-MiniLM-L-6-v2
+  batch_size: 32
+  candidates: 50             # how deep the cross-encoder rescores
+
+hybrid:
+  rrf_k: 60                  # RRF smoothing constant (Cormack et al. 2009)
+  depth: 200                 # how deep each list is read before fusion
+
+random_seed: 42

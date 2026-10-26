@@ -1,0 +1,19 @@
+# Streamlit's local sources watcher walks every imported module to decide what
+# to hot-reload. Once sentence-transformers is loaded that includes the whole
+# of `transformers`, whose vision image-processors are lazily imported and each
+# try `from torchvision...`. torchvision is not installed (and is not needed -
+# this project is text-only; it would add ~2 GB), so the watcher logs a
+# ModuleNotFoundError traceback per module: several hundred lines of noise
+# before the app even starts. Raising the log level silences the watcher while
+# keeping hot reload on save.
+[logger]
+level = "error"
+
+[server]
+# "auto" keeps hot reload. If the tracebacks ever come back, set this to "none"
+# to disable the module watcher completely - the app still runs, it just stops
+# reloading when you edit a file.
+fileWatcherType = "auto"
+
+[browser]
+gatherUsageStats = false

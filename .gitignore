@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Caches produced by the pipeline
+.cache/
+cache/
+*.faiss
+*.npy
+*.npz
+data/beir/
+data/custom/
+~/.ir_datasets/
+
+# Generated results. results/examples/ is committed on purpose - it is the
+# offline run that CI reproduces - everything else here is regenerated.
+results/*.csv
+results/*.png
+results/*.md
+results/runs/
+results/ablations/
+!results/.gitkeep
+!results/examples/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml

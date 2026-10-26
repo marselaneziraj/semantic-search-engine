@@ -1,0 +1,26 @@
+# Core (always needed)
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+pyyaml>=6.0
+pydantic>=2.6
+pydantic-settings>=2.2
+rank-bm25>=0.2.2
+tqdm>=4.66
+
+# Dense retrieval + ANN index
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+
+# Evaluation + dataset loading
+ir_measures>=0.3.3
+ir_datasets>=0.5.5
+
+# Service + UI
+fastapi>=0.110
+uvicorn>=0.29
+streamlit>=1.33
+
+# Tests
+pytest>=8.0
+httpx>=0.27

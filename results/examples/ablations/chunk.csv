@@ -1,0 +1,9 @@
+system,dataset,n_queries,n_documents,n_chunks,nDCG@10,Recall@100,MRR@10,MAP@100,mean_latency_ms,p95_latency_ms,index_seconds,notes,ablation,setting
+bm25,jsonl:toy,5,12,12,0.7041,0.6,0.8,0.6,0.38,0.78,0.0,ir_measures agreement: max delta 0.0000,chunk_size,off
+dense,jsonl:toy,5,12,12,0.6711,1.0,0.64,0.5017,1.98,3.74,0.1,ir_measures agreement: max delta 0.0000,chunk_size,off
+bm25,jsonl:toy,5,12,12,0.7041,0.6,0.8,0.6,0.4,0.52,0.0,ir_measures agreement: max delta 0.0000,chunk_size,128
+dense,jsonl:toy,5,12,12,0.6711,1.0,0.64,0.5017,1.78,2.34,0.0,ir_measures agreement: max delta 0.0000,chunk_size,128
+bm25,jsonl:toy,5,12,12,0.7041,0.6,0.8,0.6,0.42,0.54,0.0,ir_measures agreement: max delta 0.0000,chunk_size,256
+dense,jsonl:toy,5,12,12,0.6711,1.0,0.64,0.5017,1.85,3.11,0.0,ir_measures agreement: max delta 0.0000,chunk_size,256
+bm25,jsonl:toy,5,12,12,0.7041,0.6,0.8,0.6,0.77,1.35,0.0,ir_measures agreement: max delta 0.0000,chunk_size,512
+dense,jsonl:toy,5,12,12,0.6711,1.0,0.64,0.5017,1.09,1.25,0.0,ir_measures agreement: max delta 0.0000,chunk_size,512

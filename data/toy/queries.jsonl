@@ -1,0 +1,5 @@
+{"_id": "q1", "text": "how do you combine two ranked lists without calibrating scores"}
+{"_id": "q2", "text": "why does keyword search fail when wording differs"}
+{"_id": "q3", "text": "what does nDCG measure"}
+{"_id": "q4", "text": "why is a cross encoder too slow to score every document"}
+{"_id": "q5", "text": "when is exact keyword matching better than embeddings"}

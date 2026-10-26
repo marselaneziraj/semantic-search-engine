@@ -1,0 +1,14 @@
+q1 Q0 d1 1 999 bm25
+q1 Q0 d11 2 998 bm25
+q2 Q0 d2 1 999 bm25
+q2 Q0 d6 2 998 bm25
+q2 Q0 d11 3 997 bm25
+q3 Q0 d5 1 999 bm25
+q4 Q0 d4 1 999 bm25
+q4 Q0 d1 2 998 bm25
+q4 Q0 d3 3 997 bm25
+q4 Q0 d2 4 996 bm25
+q4 Q0 d8 5 995 bm25
+q5 Q0 d12 1 999 bm25
+q5 Q0 d2 2 998 bm25
+q5 Q0 d4 3 997 bm25
